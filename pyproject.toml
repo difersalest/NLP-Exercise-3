@@ -1,0 +1,22 @@
+[project]
+name = "nlp-exercise-3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=4.3.0",
+    "evaluate>=0.4.6",
+    "ipykernel>=7.0.1",
+    "pandas>=2.3.3",
+    "torch==2.7.1",
+    "tqdm>=4.67.1",
+    "transformers>=4.57.1",
+]
+
+[tool.uv]
+index-strategy = 'unsafe-best-match'
+extra-index-url = [
+    'https://download.pytorch.org/whl/cu118',
+]
+
