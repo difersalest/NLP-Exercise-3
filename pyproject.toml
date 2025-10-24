@@ -9,6 +9,8 @@ dependencies = [
     "evaluate>=0.4.6",
     "ipykernel>=7.0.1",
     "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.16.2",
     "torch==2.7.1",
     "tqdm>=4.67.1",
     "transformers>=4.57.1",
