@@ -6,19 +6,28 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "datasets==2.21.0",
-    "evaluate>=0.4.6",
-    "ipykernel>=7.0.1",
-    "pandas>=2.3.3",
-    "scikit-learn>=1.7.2",
-    "scipy>=1.16.2",
-    "torch==2.7.1",
-    "tqdm>=4.67.1",
-    "transformers>=4.57.1",
+    "evaluate",
+    "ipykernel",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "torch==2.5.1+cu121",
+    "tqdm",
+    "transformers",
 ]
+
 
 [tool.uv]
-index-strategy = 'unsafe-best-match'
-extra-index-url = [
-    'https://download.pytorch.org/whl/cu118',
+required-environments = [
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "sys_platform == 'win32' and platform_machine == 'AMD64'"
+]
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu121" },
 ]
 
+[[tool.uv.index]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
